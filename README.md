@@ -1,9 +1,5 @@
 # DEGEN TOKEN (ERC-20): Unlocking the Future of Gaming
 
-
-## Description
-
-
 ## Getting Started
 
 ### Executing program
@@ -46,7 +42,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 ```
 
-This import brings in the ERC20.sol file, which contains a standard implementation of the ERC-20 token. It provides basic functionalities like balanceOf, transfer, and allowance.
+
 
 ```solidity
 
@@ -78,7 +74,7 @@ contract GT is ERC20, Ownable, ERC20Burnable {
 
 ```
 
-This line defines a new Solidity contract called GT. It inherits from three other contracts: ERC20, Ownable, and ERC20Burnable.
+
 
 ```solidity
 
@@ -97,7 +93,7 @@ function mint(address to, uint amount) public onlyOwner {
 
 ```
 
-The mint function allows the contract owner (the address that deployed the contract) to mint new tokens and assign them to a specified address (to). The number of tokens to be minted is specified by the amount parameter.
+
 
 ```solidity
 
@@ -110,8 +106,7 @@ function transferTokens(address _receiver, uint _value) external {
 ```
 
 The transferTokens function allows the sender of the transaction to transfer tokens to another address _receiver. It takes two parameters: _receiver, the address of the recipient, and _value, the amount of tokens to be transferred.
-The require statement checks whether the balance of the msg.sender (the caller of the function) is greater than or equal to _value. If the condition evaluates to false, meaning the sender does not have enough tokens, the function will revert with the error message "INSUFFICIENT TOKENS!!".
-The approve function is called to allow the msg.sender to spend tokens on behalf of themselves. This function is required by the ERC20 standard to enable the transferFrom function.
+
 The transferFrom function is called to transfer the tokens from the msg.sender to the _receiver address. It moves _value tokens from the msg.sender to _receiver.
 
 ```solidity
@@ -147,7 +142,6 @@ function getBalance() external view returns (uint256) {
 
 ```
 
-The getBalance function is an external view function that allows an external caller to check the token balance of the address calling the function (msg.sender). It returns the token balance of the caller.
 
 ```solidity
 
@@ -178,7 +172,7 @@ This function overrides the decimals function inherited from the ERC20 contract.
 
 Tarushi Sandeep Gupta 
 [tarushigupta03@gmail.com]
-[21CBT1050@cuchd.in]
+
 
 ## License
 
